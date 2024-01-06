@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input Validation</title>
+</head>
+<body>
+  <form id="myForm">
+    <input type="text" id="myInput">
+    <button type="button" onclick="validateInput()">Submit</button>
+  </form>
+
+  <script>
+    function validateInput() {
+      // Get the input value
+      var inputValue = document.getElementById("myInput").value;
+
+      // Check if the input is empty
+      if (inputValue.trim() === "") {
+        // Display error message
+        alert("Input field is empty!");
+      } else {
+        // Input is not empty, do something else
+        alert("Input: " + inputValue);
+        // ... Perform other actions or submit the form
+      }
+    }
+  </script>
+</body>
+</html>

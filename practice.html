@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+//Create a program that generates a random number between 1 and 10 and asks the user to guess it. Provide feedback if the guess is too high or too low.
+
+
+const rndom=Math.floor(Math.random()*10)+1;
+let guess;
+let attempts=0;
+do{
+   guess= parseInt(prompt("Guess a number between 1 and 10:"));
+   if(isNaN(guess)){
+    console.log('invalid number');
+   }else{
+    attempts++;
+   }
+   if(guess<rndom){
+    console.log('too low');
+   }else if(guess>rndom){
+    console.log('too high');
+   }else{
+    console.log('congrats,you win')
+   }
+}while(guess!==rndom);
+
+//    const temperature = parseFloat(prompt("Enter the temperature:"));
+// const unit = prompt("Enter the unit (Celsius or Fahrenheit):").toLowerCase();
+
+// if (unit === "celsius") {
+//   const convertedTemperature = (temperature * 9/5) + 32;
+//   console.log("The temperature in Fahrenheit is:", convertedTemperature.toFixed(2));
+// } else if (unit === "fahrenheit") {
+//   const convertedTemperature = (temperature - 32) * 5/9;
+//   console.log("The temperature in Celsius is:", convertedTemperature.toFixed(2));
+// } else {
+//   console.log("Invalid unit. Please enter either Celsius or Fahrenheit.");
+// }
+
+
+
+//write a code in which the user enter the string in one input field and then the user  enter the alphabets of that string in another input field ,so it will appera the occurencce of that alphabet in that string by clicking a button
+// function countAlphabetOccurrence() {
+//         const inputString = document.getElementById("inputString").value;
+//         const inputAlphabet = document.getElementById("inputAlphabet").value.toLowerCase();
+//         let occurrenceCount = 0;
+//         for (let i = 0; i < inputString.length; i++) {
+//           const currentChar = inputString.charAt(i).toLowerCase();
+//           if (currentChar === inputAlphabet) {
+//             occurrenceCount++;
+//           }
+//         }
+//         document.getElementById("result").innerHTML = "The occurrence of '" + inputAlphabet + "' in the string is: " + occurrenceCount;
+//       }
+//     <h1>Alphabet Occurrence Counter</h1>
+//     <label for="inputString">Enter a string:</label>
+//     <input type="text" id="inputString" placeholder="Enter a string" /><br />
+//     <label for="inputAlphabet">Enter an alphabet:</label>
+//     <input type="text" id="inputAlphabet" placeholder="Enter an alphabet" /><br />
+//     <button onclick="countAlphabetOccurrence()">Count Occurrence</button>
+//     <p id="result"></p>
+
+</script>
+</html>
